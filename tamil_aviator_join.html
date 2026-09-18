@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ் குரூப் 💥</title>
+
+  <!--
+    META PIXEL SETUP
+    1. Replace YOUR_PIXEL_ID with your Meta Pixel ID.
+    2. This code intentionally does NOT send PageView.
+    3. The Subscribe event is sent ONLY when JOIN TELEGRAM is clicked.
+  -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1371729584935779');
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: Arial, "Noto Sans Tamil", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px 14px 70px;
+      color: #fff;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 75% 25%, rgba(255,0,0,.25), transparent 28%),
+        radial-gradient(circle at 20% 80%, rgba(0,65,130,.28), transparent 32%),
+        linear-gradient(180deg, #020202 0%, #070707 48%, #260000 100%);
+      position: relative;
+    }
+
+    /* Grid background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .24;
+      background-image:
+        linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
+      background-size: 58px 58px;
+    }
+
+    .card {
+      width: min(100%, 780px);
+      padding: 38px 28px 34px;
+      border-radius: 38px;
+      border: 2px solid rgba(190, 150, 0, .52);
+      background:
+        linear-gradient(145deg, rgba(23,18,24,.97), rgba(12,12,17,.97));
+      box-shadow:
+        0 0 45px rgba(255, 190, 0, .08),
+        0 20px 70px rgba(0,0,0,.55);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      margin: 0;
+      font-size: clamp(30px, 7vw, 58px);
+      line-height: 1.15;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .title span {
+      color: #ffc400;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 26px auto 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 4px solid #d5a900;
+      box-shadow:
+        0 0 0 6px rgba(255,190,0,.10),
+        0 0 35px rgba(255,190,0,.24);
+    }
+
+    .description {
+      padding: 25px 22px;
+      border-radius: 27px;
+      border: 1px solid rgba(196,166,50,.35);
+      background: rgba(34,34,40,.78);
+      font-size: clamp(19px, 4.1vw, 32px);
+      line-height: 1.55;
+      color: #e6e6e6;
+    }
+
+    .description strong {
+      color: #ffd000;
+    }
+
+    .join-btn {
+      width: 100%;
+      margin-top: 32px;
+      padding: 22px 18px;
+      border: 0;
+      border-radius: 22px;
+      background: linear-gradient(90deg, #079bd9, #1488c8);
+      color: white;
+      font-size: clamp(21px, 5vw, 34px);
+      font-weight: 900;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 13px 35px rgba(0, 145, 220, .30);
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .join-btn:active {
+      transform: scale(.98);
+    }
+
+    .join-btn:hover {
+      filter: brightness(1.08);
+    }
+
+    .telegram-icon {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: #fff;
+      color: #168bc8;
+      font-size: 24px;
+      vertical-align: -4px;
+    }
+
+    .verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      padding: 13px 25px;
+      border: 2px solid rgba(0, 220, 110, .45);
+      border-radius: 40px;
+      color: #43e98c;
+      font-size: clamp(15px, 3.4vw, 22px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: rgba(0, 100, 55, .10);
+    }
+
+    .check {
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #35d477;
+      color: white;
+      font-size: 17px;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 10px 35px;
+      }
+
+      .card {
+        padding: 30px 17px 26px;
+        border-radius: 30px;
+      }
+
+      .logo {
+        width: 105px;
+        height: 105px;
+      }
+
+      .description {
+        padding: 19px 14px;
+      }
+
+      .join-btn {
+        padding: 18px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1 class="title">
+     தமிழ் குரூப் 💥
+      <span>சிக்னல்</span>
+    </h1>
+
+    <!-- Replace logo.jpg with your own logo file -->
+    <img class="logo" src="logo.jpg" alt="Tamil Aviator">
+
+    <div class="description">
+      <strong>தமிழ் குரூப் 💥</strong> தமிழ்நாட்டின்
+      மிகப்பெரிய சேனல் ஆகும். நீங்கள் பணம் தினமும்
+      அதிகமாக சம்பாதிக்கலாம். சீக்கிரமாக இணைந்து
+      கொள்ளுங்கள். உங்களுக்கு ஏதேனும் தகவல்
+      தேவைப்பட்டால் தொடர்பு கொள்ளுங்கள்.
+    </div>
+
+    <button id="joinButton" class="join-btn" type="button">
+      <span class="telegram-icon">➤</span>
+      JOIN TELEGRAM
+    </button>
+
+    <div class="verified">
+      <span class="check">✓</span>
+      VERIFIED COMMUNITY
+    </div>
+
+    <div class="note">Secure connection • Telegram</div>
+  </main>
+
+  <script>
+    /*
+      IMPORTANT:
+      - Subscribe is fired ONLY after the user clicks the button.
+      - No PageView event is sent by this page.
+      - Replace the URL below with your Telegram invite/channel URL.
+    */
+
+    const TELEGRAM_URL = "https://t.me/+tmf1tx5qsgo5MzUx";
+
+    document.getElementById("joinButton").addEventListener("click", function () {
+      // Send Meta Pixel Subscribe event only on button click.
+      fbq("track", "Subscribe");
+
+      // Give the browser a short moment to send the event, then open Telegram.
+      setTimeout(function () {
+        window.location.href = TELEGRAM_URL;
+      }, 800);
+    });
+  </script>
+</body>
+</html>
